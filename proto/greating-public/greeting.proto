@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package greeting;
+
+option go_package = "github.com/S4eed3sm/public-test-proto/events";
+
+// PublicGreetingRequest represents a request to get a greeting
+message PublicGreetingRequest {
+  string name = 1;
+}
+
+// PublicGreetingResponse represents the response containing a greeting
+message PublicGreetingResponse {
+  string message = 1;
+  string timestamp = 2;
+}

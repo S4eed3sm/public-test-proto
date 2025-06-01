@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package greeting;
+
+option go_package = "github.com/S4eed3sm/public-test-proto/events";
+
+import "greeting-public/greeting.proto";
+
+// PublicGreetingService provides methods for greeting operations
+service PublicGreetingService {
+  // GetGreeting returns a personalized greeting message
+  rpc GetGreeting(PublicGreetingRequest) returns (PublicGreetingResponse) {}
+
+  // StreamGreetings streams multiple greeting messages
+  rpc StreamGreetings(PublicGreetingRequest) returns (stream PublicGreetingResponse) {}
+}
